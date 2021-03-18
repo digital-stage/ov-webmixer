@@ -2,15 +2,17 @@
   "name": "@digitalstage/ov-webmixer",
   "version": "1.0.0",
   "description": "",
-  "bin": "webmixer.js",
-  "main": "webmixer.js",
+  "bin": "dist/webmixer.js",
+  "main": "dist/webmixer.js",
   "scripts": {
-    "deploy-nexe": "nexe webmixer.js -t 14.9.0 -r \"assets/*\" -o webmixer",
+    "build": "tsc --project tsconfig.server.json && tsc --project tsconfig.client.json",
+    "start": "node dist/webmixer.js",
     "deploy": "pkg package.json"
   },
   "pkg": {
-    "scripts": "webmixer.js",
-    "assets": "assets/*"
+    "assets": [
+      "assets/*"
+    ]
   },
   "repository": {
     "type": "git",
@@ -23,14 +25,16 @@
   },
   "homepage": "https://github.com/digital-stage/ds-client#readme",
   "dependencies": {
+    "bufferutil": "latest",
     "folder-hash": "^4.0.1",
-    "node": "^15.10.0",
     "node-osc": "^5.2.2",
-    "socket.io": "^4.0.0",
-    "yargs": "^16.2.0"
+    "utf-8-validate": "latest",
+    "yargs": "^16.2.0",
+    "ws": "latest"
   },
   "devDependencies": {
     "pkg": "^4.4.9",
-    "nexe": "latest"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
   }
 }

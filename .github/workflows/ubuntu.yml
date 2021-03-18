@@ -12,8 +12,10 @@ jobs:
       uses: actions/checkout@v2
     - name: Installing dependencies
       run: yarn install
-    - name: Build
-      run: yarn deploy 
+    - name: Building
+      run: yarn build
+    - name: Deploying binary
+      run: yarn deploy
     - name: Publish binaries
       uses: svenstaro/upload-release-action@v2
       with:
