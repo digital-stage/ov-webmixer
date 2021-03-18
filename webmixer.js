@@ -35,7 +35,7 @@ const argv = yargs
 
 const homedir = argv.records || require("os").homedir();
 
-const port = argv.port || 8000;
+const port = argv.port || 8080;
 
 //oscClient2 = new osc.Client( 'localhost', 9872 );
 
