@@ -78,7 +78,7 @@ const httpserver = http.createServer(function (req, res) {
     res.write("</style>\n</head><body>\n");
     res.write("<h1>" + devname + '</h1>\n<div id="mixer">mixer</div>\n');
     res.write("<script>\n");
-    res.write('start("ws://' + ipaddr + ':' + port + '");\n');
+    res.write('url = "ws://' + ipaddr + ':' + port + '";\n');
     res.write(hosjs);
     res.write("</script>\n");
     res.write(jackrec);

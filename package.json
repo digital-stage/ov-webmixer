@@ -29,10 +29,11 @@
     "folder-hash": "^4.0.1",
     "node-osc": "^5.2.2",
     "utf-8-validate": "latest",
-    "yargs": "^16.2.0",
-    "ws": "latest"
+    "ws": "latest",
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
+    "@types/node": "^14.14.35",
     "pkg": "^4.4.9",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
